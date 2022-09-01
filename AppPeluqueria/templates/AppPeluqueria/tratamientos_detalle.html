@@ -1,0 +1,33 @@
+{% extends "AppPeluqueria/padre.html" %}
+
+{% load static %}
+
+{% block contenidoquecambia %}
+
+
+
+<body>
+
+       
+    {% for p in tratamientos %} 
+
+        <li>{{p.producto}}</li>    
+            {{p.duracion}}
+            {{p.fecha}}
+            {{p.descripcion}} 
+
+            {%  if e.imagen %}
+                <br>
+                <img src="{{p.imagen.url}}" width="500" >
+            
+            {% endif  %}
+    {% endfor %}
+   
+    <br>
+    <br>
+    <a href="{% url 'List'  %}">Regresar</a> 
+
+</body>
+</html>
+
+{% endblock %}

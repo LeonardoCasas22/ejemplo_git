@@ -1,0 +1,62 @@
+{% extends "AppPeluqueria/padre.html" %}
+
+{% load static %}
+{% load crispy_forms_tags %}
+{% block contenidoquecambia %} 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactanos</title> 
+</head>
+
+
+&nbsp; &nbsp; &nbsp;
+<body>
+    
+    <div class="col-12 col-md-6 offset-md-3" style="background-color: black;"> 
+        <div class="card">
+            <div class="body">
+                <h1>Ingrese su consulta</h1>
+
+                {% if form.errors  %}
+
+                    <p>Por favor revisa este campo  </p>
+ 
+                {% endif %}
+                
+                <div>
+                    <form action="" method="POST">{% csrf_token    %}
+
+                
+                        <div >   
+                
+                            <table style="background-color: black;">     
+
+                                {{form|crispy}} 
+
+                              </table>
+                        </div>
+                         &nbsp;&nbsp;
+        
+                        <div class="d-flex justify-content"    >
+                            
+                            <input type="reset" value="Cancelar" class="btn btn-secondary"> &nbsp; &nbsp;  
+                            
+                            <button class="btn btn-primary" type="submit">Enviar</button>   
+                            
+                        </div>
+                    </form>
+    
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+{% endblock %} 
+

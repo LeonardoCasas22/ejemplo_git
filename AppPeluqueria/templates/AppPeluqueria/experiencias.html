@@ -1,0 +1,47 @@
+{% extends "AppPeluqueria/padre.html" %}
+
+{% load static %}
+
+{% block contenidoquecambia %} 
+
+<br>
+<br>
+<br>
+<body>
+    
+
+    <h1>Experiencias:</h1><br><br>
+
+    
+    <td>
+        
+        {% for e in expe %}   
+            
+            <h4><li>{{e.nombre}} - {{e.fecha}}</li></h4>
+            <h5>{{e.tratamiento}}</h5>
+            <p>{{e.descripcion}}</p>   
+            
+            {%  if e.imagen %}
+                <br>
+                <img src="{{e.imagen.url}}" width="500" >
+            
+            {% endif  %}
+
+        {%  endfor    %}
+    
+    
+
+     
+    
+    
+        
+        <br>
+        <br>
+        <a href="{% url 'experiencia_form' %}">Contanos tu experiencia</a>
+
+    </td>
+</body>
+</html>
+
+{% endblock %}
+

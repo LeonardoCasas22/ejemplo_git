@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body> 
+{% extends "AppPeluqueria/padre.html" %}
+
+{% load static %}
+{% block contenidoquecambia %}   
+   
+   
+    <!-- Main Content-->
+
+    <div class="container px-4 px-lg-5">
+    <div class="row gx-4 gx-lg-5 justify-content-center">
+        <div class="col-md-10 col-lg-8 col-xl-7">
+            <!-- Post preview-->
+            <div class="post-preview">
+                <a href="{% url 'List' %}">
+                    <h2 class="post-title">¡Realizamos los mejores tratamientos para tu pelo!!!</h2>
+                    <h3 class="post-subtitle">En nuestra peluquería podes contar con los servicios de alisado, keratina y biotina</h3>
+                    
+                    
+                    <section class="py-5">
+                    <div class="container px-8 px-lg-10 mt-10">
+                        <div class="justify-content-center">
+                            <div class="col mb-10">
+                                <div class="card h-80">
+                                    <!-- Product image-->
+                                    <img class="card-img-top" src="https://www.hogarmania.com/archivos/202110/alisado-brasileno-con-keratina-que-es-y-cuanto-tiempo-dura-resultado-XxXx80.jpg" alt="..." />        
+                                </div>
+                            </div>        
+                        </div>
+                    </div>
+               
+                <p>
+                    Ingresá para ver todos nuestros trabajos.
+                </p>
+                </a>
+            </div>
+            
+            <!-- Divider-->
+            
+            <hr class="my-4" />
+            <!-- Post preview-->
+            <div class="post-preview">
+                <a href="{% url 'unias' %}">
+                    <h2 class="post-title">¡Tus uñas como nunca las viste!</h2>
+                    <h3 class="post-subtitle">Esculpidas, semipermanentes, kapping, esmaltados</h3> 
+                    <section class="py-5">
+                        <div class="container px-8 px-lg-10 mt-10">
+                            <div class="justify-content-center">
+                                <div class="col mb-10">
+                                    <div class="card h-80">
+                                        <!-- Product image-->
+                                        <img class="card-img-top" src="https://institutoferrer.com/wp-content/uploads/2020/08/U%C3%91AS-ESCULPIDAS.jpg" alt="..." />        
+                                    </div>
+                                </div>        
+                            </div>
+                        </div>
+                <p>
+                    Ingresá para ver todos nuestros trabajos.
+                </p>
+                </a>
+            </div>
+            <!-- Divider-->
+            <hr class="my-4" />
+            <!-- Post preview-->
+            <div class="post-preview">
+                <a href="{% url 'cortes' %}">
+                    <h2 class="post-title">Corte de pelo para hombres, mujeres y niños</h2>
+                    <section class="py-5">
+                        <div class="container px-8 px-lg-10 mt-10">
+                            <div class="justify-content-center">
+                                <div class="col mb-10">
+                                    <div class="card h-80">
+                                        <!-- Product image-->
+                                        <img class="card-img-top" src="https://i.pinimg.com/550x/f1/37/7e/f1377e15634d4a4dce4d0290e9aaba6f.jpg" alt="..." />        
+                                    </div>
+                                </div>        
+                            </div>
+                        </div>
+
+                <p>
+                    Ingresá para ver todos nuestros trabajos.
+                </p>
+                </a>
+            </div>
+            <!-- Divider-->
+            <hr class="my-4" />
+            
+        </div>
+    </div>
+</div>
+</background-color>
+</body>
+{% endblock %}
+
+</html>
